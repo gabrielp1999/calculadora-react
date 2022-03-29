@@ -7,6 +7,7 @@ function Visor(props) {
         <input type="text" className="display"
           onChange={e => props.pegarValorInput(e.target.value, 'input')}
           value={props.valorInput} 
+          onKeyPress={props.handleKeyPress}
        />
       </td>
     </tr>

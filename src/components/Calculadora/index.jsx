@@ -5,6 +5,14 @@ import Visor from '.././Visor';
 function Caculadora() {
   const [valorInput, setValorInput] = useState('');
 
+  const handleKeyPress = e => {
+    if(e.key === 'Enter'){
+      pegarValor(`${valorInput}=`, 'input');
+    }
+  }
+
+  document.title = 'Calculadora2.0'
+
   function pegarValor(value, tipo) {
       if(value !== '«' && value.indexOf('=') === -1 && value.indexOf('c') === -1){
         if(tipo === 'botao'){
@@ -12,7 +20,6 @@ function Caculadora() {
         }else{
           setValorInput(value);
         }
-        //teste
 
       }else if(value === '«') setValorInput(valorInput.slice(0, -1));
        else if(value.indexOf('c') !== -1) setValorInput('');
@@ -31,7 +38,10 @@ function Caculadora() {
           return
         }
       }
+
   }
+
+
   // resolver o bug do teclado do computador que esta falhando
   return(
     <section className='container'>
@@ -42,6 +52,7 @@ function Caculadora() {
           <Visor
             pegarValorInput={pegarValor}
             valorInput={valorInput}
+            handleKeyPress={handleKeyPress}
           />
           <Teclado 
             pegarValorBotao={pegarValor}
