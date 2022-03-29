@@ -11,7 +11,7 @@ function Caculadora() {
     }
   }
 
-  document.title = 'Calculadora2.0'
+  document.title = 'Calculadora2.0';
 
   function pegarValor(value, tipo) {
       if(value !== '«' && value.indexOf('=') === -1 && value.indexOf('c') === -1){
