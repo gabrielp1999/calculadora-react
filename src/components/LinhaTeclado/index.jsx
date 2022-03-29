@@ -5,14 +5,14 @@ function LinhaTeclado(props) {
     <tr>
       <td>
         <button 
-          onClick={() => props.pegarValorBotao(props.valor1)} 
+          onClick={() => props.pegarValorBotao(props.valor1, 'botao')} 
           className="btn btn-clear">
           {props.valor1}
         </button>
       </td>
       <td>
         <button 
-          onClick={() => props.pegarValorBotao(props.valor2)} 
+          onClick={() => props.pegarValorBotao(props.valor2, 'botao')} 
           className="btn btn-clear">
           {props.valor2}
         </button>
@@ -20,7 +20,7 @@ function LinhaTeclado(props) {
 
       <td>
         <button 
-          onClick={() => props.pegarValorBotao(props.valor3)} 
+          onClick={() => props.pegarValorBotao(props.valor3, 'botao')} 
           className="btn btn-clear">
           {props.valor3}
         </button>
@@ -28,7 +28,7 @@ function LinhaTeclado(props) {
 
       <td>
         <button 
-          onClick={() => props.pegarValorBotao(props.valor4)} 
+          onClick={() => props.pegarValorBotao(props.valor4, 'botao')} 
           className="btn btn-clear">
           {props.valor4}
         </button>
